@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnqqey43sfcqm"]
+
+[ext_resource type="Script" path="res://assets/scripts/pause.gd" id="1_sie3t"]
+
+[node name="interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="pause" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("1_sie3t")
+
+[node name="_" type="PanelContainer" parent="pause"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="colonne" type="VBoxContainer" parent="pause/_"]
+layout_mode = 2
+
+[node name="_" type="Control" parent="pause/_/colonne"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ligne_haut" type="HBoxContainer" parent="pause/_/colonne"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="_" type="Control" parent="pause/_/colonne/ligne_haut"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="reprendre" type="Button" parent="pause/_/colonne/ligne_haut"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+text = "Return to game"
+
+[node name="__" type="Control" parent="pause/_/colonne/ligne_haut"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="___" type="Control" parent="pause/_/colonne"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ligne_bas" type="HBoxContainer" parent="pause/_/colonne"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="_" type="Control" parent="pause/_/colonne/ligne_bas"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="quitter" type="Button" parent="pause/_/colonne/ligne_bas"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+text = "Quit"
+
+[node name="__" type="Control" parent="pause/_/colonne/ligne_bas"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="_____" type="Control" parent="pause/_/colonne"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="pause/_/colonne/ligne_haut/reprendre" to="pause" method="reprendre"]
+[connection signal="pressed" from="pause/_/colonne/ligne_bas/quitter" to="pause" method="quitter"]

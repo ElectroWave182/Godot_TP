@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://csw65mfamsr5j"]
+
+[ext_resource type="FontFile" uid="uid://bcbs2w47lpama" path="res://assets/themes/pixelise/police_pixelisee.ttf" id="1_hevwq"]
+[ext_resource type="StyleBox" uid="uid://dhr6smixalcct" path="res://assets/themes/pixelise/bordure_semi_enfoncee.tres" id="2_2kq1g"]
+[ext_resource type="StyleBox" uid="uid://dnr0krnrnlbk8" path="res://assets/themes/pixelise/bordure_pixelisee.tres" id="2_8yvlx"]
+[ext_resource type="StyleBox" uid="uid://bakpybopktpsk" path="res://assets/themes/pixelise/bordure_enfoncee.tres" id="4_5wpfa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e4lge"]
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_hevwq")
+Button/styles/focus = SubResource("StyleBoxTexture_e4lge")
+Button/styles/hover = ExtResource("2_2kq1g")
+Button/styles/normal = ExtResource("2_8yvlx")
+Button/styles/pressed = ExtResource("4_5wpfa")
